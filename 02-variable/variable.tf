@@ -29,5 +29,5 @@ output "out4" {
   value = "My list is 1. ${var.varlist[0]} 2. ${var.varlist[1]} 3. ${var.varlist[2]}"
 }
 output "out5" {
-  value = "My list is 1. ${var.varmap[aws]} 2. ${var.varmap[office]} 3. ${var.varmap[practice]}"
+  value = "My list is 1. ${var.varmap["aws"]} 2. ${var.varmap["office"]} 3. ${var.varmap["practice"]}"
 }
