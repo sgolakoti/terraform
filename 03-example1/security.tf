@@ -9,14 +9,17 @@ resource "aws_security_group" "allow-ssh" {
   }
   egress {
     from_port = 0
-    protocol = ""
+    protocol = "tcp"
     to_port = 0
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    name = "allow ssh1"
+    name = "allow ssh"
   }
 }
 output "sec" {
   value = aws_security_group.allow-ssh
+}
+provider "aws" {
+  region = "us-east-1"
 }
