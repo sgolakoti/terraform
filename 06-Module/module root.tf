@@ -1,9 +1,9 @@
 module "sg" {
-  source = "./sg"
+  source = "./SG"
 }
 module "ec2" {
   depends_on = [module.sg]
-  source = "./ec2"
+  source = "./EC2"
   SG_ID=module.sg.SG_ID
 
 }
